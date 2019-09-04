@@ -19,7 +19,7 @@ import ch.ethz.idsc.tensor.sca.ScalarUnaryOperator;
 
   /***************************************************/
   /** TODO "function returns needed torque to compensate restoring force of steering"
-   * TODO JPH test modif
+   * TODO JPH test modif2
    * 
    * @return function that maps quantities with unit "SCE" to quantities with unit "SCT" */
   public ScalarUnaryOperator series() {
