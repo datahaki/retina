@@ -26,9 +26,9 @@ sidewards = [splsx;splsy];
 %[splx,sply] = casadiBSPLINE(z(9),points);
 realPos = z([index.x,index.y]);
 %centerOffset = 0.2*gokartforward(z(index.theta))';
-centerPos = realPos;
+%centerPos = realPos;
 wantedpos = [splx;sply];
-error = centerPos-wantedpos;
+error = realPos-wantedpos;
 lagerror = forward'*error;
 laterror = sidewards'*error;
 
@@ -47,10 +47,10 @@ l2 = l-l1;
 f1n = l2/l;
 f2n = l1/l;
 
-wantedpos = [splx;sply];
-realPos = z([index.x,index.y]);
+%wantedpos = [splx;sply];
+%realPos = z([index.x,index.y]);
 %not yet used here
-error = realPos-wantedpos;
+%error = realPos-wantedpos;
 l = 1.19;
 %v1 = (tan(z(index.beta))*z(index.v)^2/l)^2+z(index.ab)^2;
 %v1=(tan(z(8))*z(7)^2/l);
@@ -63,6 +63,6 @@ v5 = -laterror-r-0.5*slack;
 %v4 = error'*error;
 %v2 = -1;
 %v = [v1;v2;v3];
-v = [v1;v2;v3;v4;v5;];
+v = [v1;v2;v3;v4;v5];
 end
 
